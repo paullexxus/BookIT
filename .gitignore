@@ -1,0 +1,39 @@
+# Environment and configuration files with secrets
+.env
+.env.local
+.env.*.local
+.envtxt.txt
+
+# Config files with sensitive credentials
+config/paymongo.php
+config/OAuth.php
+config/email.php
+
+# IDE and editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# Uploads (keep folder structure, ignore contents)
+uploads/*
+!uploads/.gitkeep
+
+# Dependencies
+vendor/
+node_modules/
+
+# Generated files
+.phpunit.result.cache
