@@ -125,6 +125,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
     
+    // Ensure we return clean JSON even if PHP emitted warnings/notices earlier
+    if (ob_get_length()) {
+        @ob_clean();
+    }
     echo json_encode($response);
     exit;
 }
@@ -172,6 +176,7 @@ $all_amenities = get_multiple_results("SELECT DISTINCT amenity_name, description
     <link href="../assets/css/modals.css" rel="stylesheet">
 </head>
 <body>
+<?php include_once __DIR__ . '/../includes/sidebar_init.php'; ?>
 
 <div class="d-flex">
     <!-- Sidebar -->
@@ -992,9 +997,15 @@ $all_amenities = get_multiple_results("SELECT DISTINCT amenity_name, description
                         <div class="form-group">
                             <label class="form-label">Homepage Banner</label>
                             <div class="banner-upload">
-                                <div class="banner-preview">
-                                    <img src="../assets/images/banner.jpg" alt="Banner" id="bannerPreview">
-                                </div>
+                                        <div class="banner-preview">
+                                            <?php
+                                            $banner_file_path = __DIR__ . '/../assets/images/banner.jpg';
+                                            $banner_url = (defined('SITE_URL') ? rtrim(SITE_URL, '/') : '/BookIT') . '/assets/images/banner.jpg';
+                                            $fallback_url = (defined('SITE_URL') ? rtrim(SITE_URL, '/') : '/BookIT') . '/assets/images/menu.svg';
+                                            $banner_src = file_exists($banner_file_path) ? $banner_url : $fallback_url;
+                                            ?>
+                                            <img src="<?php echo $banner_src; ?>" alt="Banner" id="bannerPreview">
+                                        </div>
                                 <input type="file" class="form-control" id="bannerFile" accept="image/*">
                                 <small class="form-text text-muted">Recommended size: 1200x400px</small>
                             </div>

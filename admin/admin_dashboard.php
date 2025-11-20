@@ -189,9 +189,10 @@ $usersByRoleJson = json_encode($usersByRole);
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+<?php include_once __DIR__ . '/../includes/sidebar_init.php'; ?>
 <div class="container-fluid">
         <div class="row">
-  <?php include '../includes/sidebar.php'; ?>
+  <?php include_once __DIR__ . '/../includes/sidebar.php'; ?>
 
   <!-- =================== DASHBOARD CONTENT =================== -->
   <main class="content">
@@ -841,3 +842,4 @@ $usersByRoleJson = json_encode($usersByRole);
 
 </body>
 </html>
+<?php include_once __DIR__ . '/../includes/sidebar_assets.php'; ?>

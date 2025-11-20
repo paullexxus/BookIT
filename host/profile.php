@@ -376,6 +376,7 @@ $page_title = 'Profile & Settings';
     </style>
 </head>
 <body>
+        <?php include_once __DIR__ . '/../includes/sidebar_init.php'; ?>
     <div class="main-container">
         <?php include '../includes/sidebar.php'; ?>
         

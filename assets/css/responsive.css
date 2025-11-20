@@ -1,0 +1,91 @@
+/* Global responsive rules for BookIT
+   Breakpoints:
+     - Mobile (cp): max-width: 600px
+     - Tablet: 601px - 1024px
+     - Desktop: default
+*/
+
+/* Base: ensure images and cards scale */
+img, .branch-image, .unit-image, .card img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile first adjustments (phones) */
+@media (max-width: 600px) {
+  /* Layout containers */
+  .container, .container-fluid, .page-container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  /* Navbar adjustments */
+  .navbar .navbar-brand { font-size: 1.05rem; }
+  .navbar .nav-link { font-size: 0.95rem; padding: .4rem .6rem; }
+
+  /* Sidebar becomes collapsible / off-canvas */
+  .sidebar, .side-nav {
+    position: fixed !important;
+    left: 0; top: 56px; bottom: 0;
+    width: 220px; transform: translateX(-110%);
+    transition: transform .25s ease-in-out; z-index: 1050;
+    background: #fff;
+  }
+  .sidebar.open { transform: translateX(0); }
+  .content-with-sidebar { margin-left: 0 !important; }
+
+  /* Cards & grids stack */
+  .row, .grid { display: block; }
+  .col, [class*="col-"] { width: 100% !important; display: block !important; }
+  .card, .feature-card, .stat-card, .luxury-card { margin-bottom: 1rem; }
+
+  /* Stat/card text sizes */
+  .stat-card .stat-number { font-size: 1.25rem; }
+  .feature-card .card-body, .card-body { padding: .9rem; }
+
+  /* Booking modal/kernel UI */
+  .modal-dialog { max-width: 100% !important; margin: 0 8px; }
+  .booking-form .form-control, .form-control { font-size: .95rem; }
+
+  /* Reduce spacing on lists */
+  .branch-stats .stat-item, .key-features .feature-item { font-size: .9rem; }
+
+  /* Footer spacing */
+  footer .container { padding-left: 12px; padding-right: 12px; }
+}
+
+/* Tablet adjustments */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container, .container-fluid { padding-left: 20px; padding-right: 20px; }
+  .col, [class*="col-"] { width: 50% !important; }
+  .card, .feature-card { margin-bottom: 1rem; }
+  .sidebar { width: 240px; position: static; transform: none; }
+  .content-with-sidebar { margin-left: 240px; }
+  .navbar .nav-link { padding: .5rem .75rem; }
+  .stat-card .stat-number { font-size: 1.6rem; }
+}
+
+/* Desktop (default) tweaks to ensure responsive.css doesn't override explicit layouts */
+@media (min-width: 1025px) {
+  .container { max-width: 1200px; }
+  .col-3 { width: 25%; }
+  .col-4 { width: 33.3333%; }
+  .col-6 { width: 50%; }
+}
+
+/* Utility helpers */
+.hide-on-mobile { display: none !important; }
+.show-on-mobile { display: block !important; }
+
+/* Accessibility: make tap targets larger */
+.btn, .nav-link, .feature-item { min-height: 40px; }
+
+/* Ensure forms don't overflow on small screens */
+form { word-break: break-word; }
+
+/* Small fixes for tables on mobile */
+.table-responsive { overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; }
+
+/* Prevent extremely large fixed elements overlapping on mobile */
+.fixed-top, .fixed-bottom { left: 0; right: 0; }

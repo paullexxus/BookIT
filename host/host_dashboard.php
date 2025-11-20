@@ -140,6 +140,7 @@ $recent_bookings = get_multiple_results("
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <?php include_once __DIR__ . '/../includes/sidebar_init.php'; ?>
 
 <div class="d-flex">
     <!-- Sidebar -->
@@ -699,3 +700,4 @@ $recent_bookings = get_multiple_results("
 
 </body>
 </html>
+<?php include_once __DIR__ . '/../includes/sidebar_assets.php'; ?>

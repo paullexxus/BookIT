@@ -205,8 +205,24 @@ if (!function_exists('execute_query')) {
 if (!function_exists('close_connection')) {
     function close_connection() {
         global $conn;
-        if ($conn) {
-            $conn->close();
+        // Defensive close: in some PHP versions calling ->close() on an already-closed
+        // mysqli object will throw an Error (which does not inherit from Exception).
+        // To avoid a fatal error during shutdown, we:
+        // - verify $conn is set and is a mysqli instance
+        // - call ->close() inside a try/catch that catches Throwable
+        // - clear the global reference after closing so future attempts are no-ops
+        if (isset($conn) && $conn instanceof mysqli) {
+            try {
+                // Attempt to close the connection. This may throw an Error if the
+                // underlying object was already closed by other code.
+                $conn->close();
+            } catch (\Throwable $t) {
+                // Log at debug level but do not re-throw during shutdown.
+                error_log("db.php close_connection warning: " . $t->getMessage());
+            } finally {
+                // Remove the global reference so repeated calls won't try to close again.
+                $conn = null;
+            }
         }
     }
 }

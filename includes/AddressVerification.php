@@ -74,13 +74,14 @@ class AddressVerification {
     public function checkAddressExists($building, $street, $unit, $city, $exclude_unit_id = null) {
         $address_hash = $this->generateAddressHash($building, $street, $unit, $city);
         
-        $sql = "SELECT u.unit_id, u.building_name, u.street_address, u.city, 
-                       h.full_name as host_name, h.email as host_email
+        // Query using actual unit columns (not address_verification table)
+        $sql = "SELECT u.unit_id, u.unit_number, u.city, 
+                       h.first_name as host_name, h.email as host_email
                 FROM units u
                 LEFT JOIN users h ON u.host_id = h.user_id
-                WHERE u.address_hash = ?";
+                WHERE u.unit_number = ? AND u.city = ?";
         
-        $params = [$address_hash];
+        $params = [$unit, $city];
         
         if ($exclude_unit_id) {
             $sql .= " AND u.unit_id != ?";

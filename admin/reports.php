@@ -108,6 +108,7 @@ if (!$useDb) {
         <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.bootstrap5.min.css">
     </head>
     <body>
+    <?php include_once __DIR__ . '/../includes/sidebar_init.php'; ?>
     <!-- =================== BUILT-IN SIDEBAR =================== -->
     <aside class="sidebar" id="sidebar">
     <div class="brand">

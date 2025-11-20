@@ -546,3 +546,78 @@ Stack trace:
 [17-Nov-2025 21:53:54 Asia/Manila] PHP Warning:  Undefined array key "description" in C:\wamp64\www\BookIT\host\unit_management.php on line 110
 [17-Nov-2025 21:53:54 Asia/Manila] PHP Stack trace:
 [17-Nov-2025 21:53:54 Asia/Manila] PHP   1. {main}() C:\wamp64\www\BookIT\host\unit_management.php:0
+[18-Nov-2025 17:47:46 Asia/Manila] PHP Warning:  include_once(C:\wamp64\www\BookIT\config\paymongo.php): Failed to open stream: No such file or directory in C:\wamp64\www\BookIT\host\payment_management.php on line 10
+[18-Nov-2025 17:47:46 Asia/Manila] PHP Stack trace:
+[18-Nov-2025 17:47:46 Asia/Manila] PHP   1. {main}() C:\wamp64\www\BookIT\host\payment_management.php:0
+[18-Nov-2025 17:47:46 Asia/Manila] PHP Warning:  include_once(): Failed opening 'C:\wamp64\www\BookIT\config\paymongo.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\BookIT\host\payment_management.php on line 10
+[18-Nov-2025 17:47:46 Asia/Manila] PHP Stack trace:
+[18-Nov-2025 17:47:46 Asia/Manila] PHP   1. {main}() C:\wamp64\www\BookIT\host\payment_management.php:0
+[18-Nov-2025 17:47:52 Asia/Manila] PHP Warning:  include_once(../config/paymongo.php): Failed to open stream: No such file or directory in C:\wamp64\www\BookIT\host\payment_management.php on line 10
+[18-Nov-2025 17:47:52 Asia/Manila] PHP Stack trace:
+[18-Nov-2025 17:47:52 Asia/Manila] PHP   1. {main}() C:\wamp64\www\BookIT\host\payment_management.php:0
+[18-Nov-2025 17:47:52 Asia/Manila] PHP Warning:  include_once(): Failed opening '../config/paymongo.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\BookIT\host\payment_management.php on line 10
+[18-Nov-2025 17:47:52 Asia/Manila] PHP Stack trace:
+[18-Nov-2025 17:47:52 Asia/Manila] PHP   1. {main}() C:\wamp64\www\BookIT\host\payment_management.php:0
+[18-Nov-2025 17:48:00 Asia/Manila] PHP Warning:  include_once(../config/paymongo.php): Failed to open stream: No such file or directory in C:\wamp64\www\BookIT\host\payment_management.php on line 10
+[18-Nov-2025 17:48:00 Asia/Manila] PHP Stack trace:
+[18-Nov-2025 17:48:00 Asia/Manila] PHP   1. {main}() C:\wamp64\www\BookIT\host\payment_management.php:0
+[18-Nov-2025 17:48:00 Asia/Manila] PHP Warning:  include_once(): Failed opening '../config/paymongo.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\BookIT\host\payment_management.php on line 10
+[18-Nov-2025 17:48:00 Asia/Manila] PHP Stack trace:
+[18-Nov-2025 17:48:00 Asia/Manila] PHP   1. {main}() C:\wamp64\www\BookIT\host\payment_management.php:0
+[18-Nov-2025 18:25:59 Asia/Manila] UNAUTHORIZED ACCESS ATTEMPT: User ID: 13 attempted to access page requiring roles: host, manager (Current role: renter) at /BookIT/host/host_dashboard.php
+[18-Nov-2025 18:26:12 Asia/Manila] UNAUTHORIZED ACCESS ATTEMPT: User ID: 13 attempted to access page requiring roles: host, manager (Current role: renter) at /BookIT/host/profile.php
+[18-Nov-2025 18:26:13 Asia/Manila] UNAUTHORIZED ACCESS ATTEMPT: User ID: 13 attempted to access page requiring roles: host (Current role: renter) at /BookIT/host/payment_management.php
+[18-Nov-2025 18:46:54 Asia/Manila] === addBranch() called ===
+[18-Nov-2025 18:46:55 Asia/Manila]   branch_name: makati
+[18-Nov-2025 18:46:55 Asia/Manila]   address: caloocan city
+[18-Nov-2025 18:46:55 Asia/Manila]   city: caloocan city
+[18-Nov-2025 18:46:55 Asia/Manila]   contact_number: 
+[18-Nov-2025 18:46:55 Asia/Manila]   email: paullexxusantonio@gmail.com
+[18-Nov-2025 18:46:55 Asia/Manila]   host_id: NULL
+[18-Nov-2025 18:46:55 Asia/Manila]   SQL: INSERT INTO branches (branch_name, address, city, contact_number, email, host_id, is_active) 
+                VALUES (?, ?, ?, ?, ?, ?, 1)
+[18-Nov-2025 18:46:55 Asia/Manila]   Params count: 6
+[18-Nov-2025 18:46:55 Asia/Manila]   Params: ["makati","caloocan city","caloocan city","","paullexxusantonio@gmail.com",null]
+[18-Nov-2025 18:46:55 Asia/Manila]   execute_query() returned: TRUE
+[18-Nov-2025 18:46:55 Asia/Manila]   SUCCESS: Branch added!
+[18-Nov-2025 19:11:22 Asia/Manila] PHP Warning:  Undefined array key "user_name" in C:\wamp64\www\BookIT\modules\reservations.php on line 260
+[18-Nov-2025 19:11:22 Asia/Manila] PHP Stack trace:
+[18-Nov-2025 19:11:22 Asia/Manila] PHP   1. {main}() C:\wamp64\www\BookIT\modules\reservations.php:0
+[18-Nov-2025 19:11:30 Asia/Manila] PHP Warning:  Undefined array key "user_name" in C:\wamp64\www\BookIT\modules\reservations.php on line 260
+[18-Nov-2025 19:11:30 Asia/Manila] PHP Stack trace:
+[18-Nov-2025 19:11:30 Asia/Manila] PHP   1. {main}() C:\wamp64\www\BookIT\modules\reservations.php:0
+[18-Nov-2025 19:11:37 Asia/Manila] PHP Warning:  Undefined array key "user_name" in C:\wamp64\www\BookIT\modules\reservations.php on line 260
+[18-Nov-2025 19:11:37 Asia/Manila] PHP Stack trace:
+[18-Nov-2025 19:11:37 Asia/Manila] PHP   1. {main}() C:\wamp64\www\BookIT\modules\reservations.php:0
+[18-Nov-2025 19:15:21 Asia/Manila] PHP Warning:  Undefined array key "custom_message" in C:\wamp64\www\BookIT\admin\settings.php on line 120
+[18-Nov-2025 19:15:21 Asia/Manila] PHP Stack trace:
+[18-Nov-2025 19:15:21 Asia/Manila] PHP   1. {main}() C:\wamp64\www\BookIT\admin\settings.php:0
+[18-Nov-2025 19:15:25 Asia/Manila] PHP Warning:  Undefined array key "custom_message" in C:\wamp64\www\BookIT\admin\settings.php on line 120
+[18-Nov-2025 19:15:25 Asia/Manila] PHP Stack trace:
+[18-Nov-2025 19:15:25 Asia/Manila] PHP   1. {main}() C:\wamp64\www\BookIT\admin\settings.php:0
+[18-Nov-2025 19:19:45 Asia/Manila] PHP Warning:  Undefined array key "custom_message" in C:\wamp64\www\BookIT\admin\settings.php on line 120
+[18-Nov-2025 19:19:45 Asia/Manila] PHP Stack trace:
+[18-Nov-2025 19:19:45 Asia/Manila] PHP   1. {main}() C:\wamp64\www\BookIT\admin\settings.php:0
+[18-Nov-2025 19:34:55 Asia/Manila] PHP Warning:  Undefined array key "custom_message" in C:\wamp64\www\BookIT\admin\settings.php on line 120
+[18-Nov-2025 19:34:55 Asia/Manila] PHP Stack trace:
+[18-Nov-2025 19:34:55 Asia/Manila] PHP   1. {main}() C:\wamp64\www\BookIT\admin\settings.php:0
+[19-Nov-2025 00:37:04 Asia/Manila] PHP Warning:  Constant SITE_URL already defined in C:\wamp64\www\BookIT\includes\sidebar.php on line 17
+[19-Nov-2025 00:37:04 Asia/Manila] PHP Stack trace:
+[19-Nov-2025 00:37:04 Asia/Manila] PHP   1. {main}() C:\wamp64\www\BookIT\host\host_dashboard.php:0
+[19-Nov-2025 00:37:05 Asia/Manila] PHP   2. include() C:\wamp64\www\BookIT\host\host_dashboard.php:147
+[19-Nov-2025 00:37:05 Asia/Manila] PHP   3. define($constant_name = 'SITE_URL', $value = 'localhost') C:\wamp64\www\BookIT\includes\sidebar.php:17
+[19-Nov-2025 01:26:32 Asia/Manila] UNAUTHORIZED ACCESS ATTEMPT: User ID: 1 attempted to access page requiring roles: host, manager (Current role: admin) at /BookIT/host/reservations.php
+[19-Nov-2025 16:05:44 Asia/Manila] PHP Fatal error:  Uncaught Error: mysqli object is already closed in C:\wamp64\www\BookIT\config\db.php:210
+Stack trace:
+#0 C:\wamp64\www\BookIT\config\db.php(210): mysqli->close()
+#1 [internal function]: close_connection()
+#2 {main}
+  thrown in C:\wamp64\www\BookIT\config\db.php on line 210
+[19-Nov-2025 16:11:22 Asia/Manila] PHP Fatal error:  Uncaught Error: mysqli object is already closed in C:\wamp64\www\BookIT\config\db.php:210
+Stack trace:
+#0 C:\wamp64\www\BookIT\config\db.php(210): mysqli->close()
+#1 [internal function]: close_connection()
+#2 {main}
+  thrown in C:\wamp64\www\BookIT\config\db.php on line 210
+[19-Nov-2025 16:12:38 Asia/Manila] db.php close_connection warning: mysqli object is already closed
+[20-Nov-2025 21:09:03 Asia/Manila] db.php close_connection warning: mysqli object is already closed

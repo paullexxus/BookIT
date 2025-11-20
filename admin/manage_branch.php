@@ -172,10 +172,9 @@ if (isset($_POST['delete_branch'])) {
         <!-- DataTables -->
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.bootstrap5.min.css">
-    </head>
-    <body>
-
-    <div class="d-flex">
+</head>
+<body>
+<?php include_once __DIR__ . '/../includes/sidebar_init.php'; ?>    <div class="d-flex">
         <!-- Sidebar -->
         <?php include '../includes/sidebar.php'; ?>
 

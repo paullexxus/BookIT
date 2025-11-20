@@ -1,3 +1,5 @@
+@import url('responsive.css');
+
 /* sidebar-common.css - Unified Sidebar Styles (MASTER FILE - consolidates sidebar.css and sidebar-common.css) */
 
 /* Sidebar Styles */
@@ -230,5 +232,108 @@
     
     .sidebar.active {
         transform: translateX(0);
+    }
+}
+
+/* Collapsed icon-bar behavior (desktop/tablet) */
+.sidebar-collapsed {
+    width: 64px !important;
+    min-width: 64px !important;
+}
+
+.sidebar-collapsed .brand span,
+.sidebar-collapsed .sidebar-menu a span,
+.sidebar-collapsed .profile-details {
+    display: none !important;
+}
+
+.sidebar-collapsed .sidebar-menu i {
+    margin-right: 0 !important;
+    width: auto !important;
+    font-size: 1.3em !important;
+    text-align: center;
+    display: block;
+}
+
+/* Hover to temporarily expand when collapsed (desktop only) */
+@media (min-width: 769px) {
+    .sidebar-collapsed:hover {
+        width: 280px !important;
+    }
+
+    .sidebar-collapsed:hover .brand span,
+    .sidebar-collapsed:hover .sidebar-menu a span,
+    .sidebar-collapsed:hover .profile-details {
+        display: inline-block !important;
+    }
+
+    .sidebar-collapsed:hover .sidebar-menu i {
+        margin-right: 15px !important;
+    }
+}
+
+/* Toggle button (hamburger / icon bar) */
+/* Sidebar toggle button: placed inline inside .brand (non-floating) */
+.sidebar .brand .sidebar-toggle-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.sidebar .brand .sidebar-toggle-btn img {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar .brand .sidebar-toggle-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52,152,219,0.12);
+}
+
+/* Small screen: keep toggle visible and sidebar off-canvas */
+@media (max-width: 768px) {
+    .sidebar-toggle-btn {
+        left: 12px;
+        top: 12px;
+        background: rgba(52,152,219,0.95);
+    }
+}
+
+/* When .sidebar-open applied to body, slide sidebar in for mobile */
+body.sidebar-open .sidebar {
+    transform: translateX(0) !important;
+}
+
+/* Main content shifting when sidebar is collapsed/expanded */
+.content, .main-content {
+    transition: margin-left 0.25s ease, padding 0.25s ease;
+    margin-left: 280px; /* default when sidebar visible */
+}
+
+/* When body has collapsed state, reduce left margin so content fills more space */
+body.sidebar-collapsed .content,
+body.sidebar-collapsed .main-content {
+    margin-left: 64px; /* match .sidebar-collapsed width */
+}
+
+/* Small-screen behavior: don't apply large left margin */
+@media (max-width: 768px) {
+    .content, .main-content {
+        margin-left: 0 !important;
+    }
+    body.sidebar-collapsed .content, body.sidebar-collapsed .main-content {
+        margin-left: 0 !important;
     }
 }

@@ -569,3 +569,4 @@ $branches = mysqli_query($conn, "SELECT * FROM branches WHERE is_active = 1 ORDE
     <script src="../assets/js/renter/reserve_unit.js"></script>
 </body>
 </html>
+<?php include_once __DIR__ . '/../includes/sidebar_assets.php'; ?>

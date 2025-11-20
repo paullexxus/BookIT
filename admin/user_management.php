@@ -258,6 +258,7 @@ try {
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+<?php include_once __DIR__ . '/../includes/sidebar_init.php'; ?>
 
 <!-- =================== BUILT-IN SIDEBAR =================== -->
   <aside class="sidebar" id="sidebar">

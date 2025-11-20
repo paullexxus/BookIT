@@ -6,8 +6,8 @@
 
 include '../includes/session.php';
 include '../includes/functions.php';
-include_once '../config/db.php';
-include_once '../config/paymongo.php';
+include_once dirname(__FILE__) . '/../config/db.php';
+include_once dirname(__FILE__) . '/../config/paymongo.php';
 checkRole(['host']);
 
 $host_id = $_SESSION['user_id'];
@@ -525,6 +525,7 @@ $stats = get_single_result("
     </style>
 </head>
 <body>
+    <?php include_once __DIR__ . '/../includes/sidebar_init.php'; ?>
     <div class="main-container">
         <?php include '../includes/sidebar.php'; ?>
         

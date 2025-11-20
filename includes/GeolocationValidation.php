@@ -200,7 +200,7 @@ class GeolocationValidation {
      * Detect exact coordinate match (same GPS pin)
      */
     public function checkExactCoordinateMatch($latitude, $longitude, $exclude_unit_id = null) {
-        $sql = "SELECT u.unit_id, u.building_name, u.street_address, u.city,
+        $sql = "SELECT u.unit_id, u.unit_number, u.city,
                        u.latitude, u.longitude
                 FROM units u
                 WHERE u.latitude = ? AND u.longitude = ?";

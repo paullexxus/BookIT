@@ -240,6 +240,7 @@
     <link rel="stylesheet" href="../assets/css/admin/unit_management.css">
     </head>
     <body>
+    <?php include_once __DIR__ . '/../includes/sidebar_init.php'; ?>
 
     <!-- =================== BUILT-IN SIDEBAR =================== -->
     <aside class="sidebar" id="sidebar">

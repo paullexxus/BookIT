@@ -231,6 +231,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['change_password'])) {
     </style>
 </head>
 <body>
+<?php include_once __DIR__ . '/../includes/sidebar_init.php'; ?>
 <div class="container-fluid">
     <div class="row">
         <?php include '../includes/sidebar.php'; ?>

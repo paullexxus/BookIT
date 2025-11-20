@@ -257,7 +257,7 @@ if ($db_connected && $user_role === 'admin') {
             </div>
             <div class="text-end">
                 <span class="badge bg-primary fs-6"><?php echo $user_role; ?></span>
-                <div class="text-muted mt-1">Welcome, <?php echo $_SESSION['user_name']; ?></div>
+                <div class="text-muted mt-1">Welcome, <?php echo htmlspecialchars($_SESSION['user_name'] ?? $_SESSION['fullname'] ?? 'User'); ?></div>
             </div>
         </div>
 
